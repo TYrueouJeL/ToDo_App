@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="./output.css" rel="stylesheet">
+        <script src="script.js" type="module"></script>
 
         <title>Todo App</title>
     </head>
@@ -16,6 +17,8 @@
             <div class="max-w-md mx-auto bg-white shadow py-6 px-4">
                 <fieldset class="space-y-3">
                     <legend class="text-base font-semibold text-slate-900">Todo</legend>
+
+                    <div class="grid grid-cols-[1fr_24px] items-center gap-6" id="taskContent"></div>
 
                     <div class="grid grid-cols-[1fr_24px] items-center gap-6">
                         <label class="peer grid grid-cols-[auto_1fr] items-center gap-3 rounded-md px-2 hover:bg-slate-100">
@@ -55,5 +58,24 @@
                 </fieldset>
             </div>
         </div>
+
+        <form>
+            <div>
+                <fieldset>
+                    <legend>Nouvelle tâche</legend>
+
+                    <div>
+                        <div>
+                            <label for="nomTache">Nom de la tâche</label>
+                            <textarea class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1" id="todoTitle" rows="1" required></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1" type="submit">Ajouter</button>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
     </body>
 </html>
