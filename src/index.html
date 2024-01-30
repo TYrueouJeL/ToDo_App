@@ -12,13 +12,48 @@
     <body>
         <h1 class="text-3xl font-bold underline">Todo App</h1>
 
-        <ul>
-            <li><input type="checkbox">Finir le cahier de texte</li>
-            <li><input type="checkbox">Faire le Javascript</li>
-            <li><input type="checkbox">Vivre</li>
-            <li><input type="checkbox">Ne pas perdre le permis</li>
-            <li><input type="checkbox">Passer master sur lol</li>
-            <li><input type="checkbox">Passer immortal sur Valorant</li>
-        </ul>
+        <div class="relative rounded-xl overflow-auto">
+            <div class="max-w-md mx-auto bg-white shadow py-6 px-4">
+                <fieldset class="space-y-3">
+                    <legend class="text-base font-semibold text-slate-900">Todo</legend>
+
+                    <div class="grid grid-cols-[1fr_24px] items-center gap-6">
+                        <label class="peer grid grid-cols-[auto_1fr] items-center gap-3 rounded-md px-2 hover:bg-slate-100">
+                            <input type="checkbox" class="peer size-3.5 appearance-none rounded-sm border border-slate-300 accent-pink-500 dark:accent-pink-600 checked:appearance-auto">
+                            <span class="select-none text-slate-700 peer-checked:text-slate-400 peer-checked:line-through">Finir le cahier de texte</span>
+                        </label>
+                        <div class="size-[26px] rounded-md p-1 hover:bg-red-50 hover:text-red-500 block peer-has-[:checked]:hidden">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-[1fr_24px] items-center gap-6">
+                        <label class="peer grid grid-cols-[auto_1fr] items-center gap-3 rounded-md px-2 hover:bg-slate-100">
+                            <input type="checkbox" class="peer size-3.5 appearance-none rounded-sm border border-slate-300 accent-pink-500 dark:accent-pink-600 checked:appearance-auto">
+                            <span class="select-none text-slate-700 peer-checked:text-slate-400 peer-checked:line-through">Finir le Javascript</span>
+                        </label>
+                        <div class="size-[26px] rounded-md p-1 hover:bg-red-50 hover:text-red-500 block peer-has-[:checked]:hidden">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-[1fr_24px] items-center gap-6">
+                        <label class="peer grid grid-cols-[auto_1fr] items-center gap-3 rounded-md px-2 hover:bg-slate-100">
+                            <input type="checkbox" class="peer size-3.5 appearance-none rounded-sm border border-slate-300 accent-pink-500 dark:accent-pink-600 checked:appearance-auto" checked>
+                            <span class="select-none text-slate-700 peer-checked:text-slate-400 peer-checked:line-through">Avoir le permis de conduire</span>
+                        </label>
+                        <div class="size-[26px] rounded-md p-1 hover:bg-red-50 hover:text-red-500 block peer-has-[:checked]:hidden">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
     </body>
 </html>
